@@ -1,0 +1,144 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C50502E1-825B-4CC1-ACCC-87D0FC1C58B0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MicroClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\microserver\MicroServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\iocp-delphi-master\examples\worker\workerdemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslClient10.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslServer10.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\UDP\Sender\gUdpSender.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\UDP\Receiver\gUdpReceiver.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ConsoleServer\ConsoleServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Consoles-master\ConsoleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\SampleGateway\SampleGW.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MicroClient">
+        <MSBuild Projects="MicroClient.dproj"/>
+    </Target>
+    <Target Name="MicroClient:Clean">
+        <MSBuild Projects="MicroClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MicroClient:Make">
+        <MSBuild Projects="MicroClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MicroServer">
+        <MSBuild Projects="..\microserver\MicroServer.dproj"/>
+    </Target>
+    <Target Name="MicroServer:Clean">
+        <MSBuild Projects="..\microserver\MicroServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MicroServer:Make">
+        <MSBuild Projects="..\microserver\MicroServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="workerdemo">
+        <MSBuild Projects="..\iocp-delphi-master\examples\worker\workerdemo.dproj"/>
+    </Target>
+    <Target Name="workerdemo:Clean">
+        <MSBuild Projects="..\iocp-delphi-master\examples\worker\workerdemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="workerdemo:Make">
+        <MSBuild Projects="..\iocp-delphi-master\examples\worker\workerdemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="sslClient10">
+        <MSBuild Projects="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslClient10.dproj"/>
+    </Target>
+    <Target Name="sslClient10:Clean">
+        <MSBuild Projects="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslClient10.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sslClient10:Make">
+        <MSBuild Projects="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslClient10.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="sslServer10">
+        <MSBuild Projects="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslServer10.dproj"/>
+    </Target>
+    <Target Name="sslServer10:Clean">
+        <MSBuild Projects="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslServer10.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sslServer10:Make">
+        <MSBuild Projects="..\indy-project-demos-master\IndySSL\Indy10SSLExample\sslServer10.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="gUdpSender">
+        <MSBuild Projects="..\UDP\Sender\gUdpSender.dproj"/>
+    </Target>
+    <Target Name="gUdpSender:Clean">
+        <MSBuild Projects="..\UDP\Sender\gUdpSender.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="gUdpSender:Make">
+        <MSBuild Projects="..\UDP\Sender\gUdpSender.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="gUdpReceiver">
+        <MSBuild Projects="..\UDP\Receiver\gUdpReceiver.dproj"/>
+    </Target>
+    <Target Name="gUdpReceiver:Clean">
+        <MSBuild Projects="..\UDP\Receiver\gUdpReceiver.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="gUdpReceiver:Make">
+        <MSBuild Projects="..\UDP\Receiver\gUdpReceiver.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConsoleServer">
+        <MSBuild Projects="..\ConsoleServer\ConsoleServer.dproj"/>
+    </Target>
+    <Target Name="ConsoleServer:Clean">
+        <MSBuild Projects="..\ConsoleServer\ConsoleServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsoleServer:Make">
+        <MSBuild Projects="..\ConsoleServer\ConsoleServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConsoleDemo">
+        <MSBuild Projects="..\Consoles-master\ConsoleDemo.dproj"/>
+    </Target>
+    <Target Name="ConsoleDemo:Clean">
+        <MSBuild Projects="..\Consoles-master\ConsoleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsoleDemo:Make">
+        <MSBuild Projects="..\Consoles-master\ConsoleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SampleGW">
+        <MSBuild Projects="..\SampleGateway\SampleGW.dproj"/>
+    </Target>
+    <Target Name="SampleGW:Clean">
+        <MSBuild Projects="..\SampleGateway\SampleGW.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SampleGW:Make">
+        <MSBuild Projects="..\SampleGateway\SampleGW.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MicroClient;MicroServer;workerdemo;sslClient10;sslServer10;gUdpSender;gUdpReceiver;ConsoleServer;ConsoleDemo;SampleGW"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MicroClient:Clean;MicroServer:Clean;workerdemo:Clean;sslClient10:Clean;sslServer10:Clean;gUdpSender:Clean;gUdpReceiver:Clean;ConsoleServer:Clean;ConsoleDemo:Clean;SampleGW:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MicroClient:Make;MicroServer:Make;workerdemo:Make;sslClient10:Make;sslServer10:Make;gUdpSender:Make;gUdpReceiver:Make;ConsoleServer:Make;ConsoleDemo:Make;SampleGW:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
